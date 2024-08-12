@@ -1,12 +1,14 @@
 {
   "name": "maclink",
   "version": "1.0.0",
-  "description": "A network information tool using Electron",
+  "description": "A Link Discovery tool built in Electron for Apple Silicon",
+  "homepage": "./",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "package": "electron-packager . MacLink --platform=darwin --arch=arm64 --icon=assets/icon.icns --out=dist --overwrite",
+    "package-universal": "electron-packager . MacLink --platform=darwin --arch=universal --icon=assets/icon.icns --out=dist --overwrite"
   },
   "keywords": [],
   "author": "",
